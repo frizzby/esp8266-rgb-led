@@ -36,43 +36,43 @@ end
 
 
 function admin(s, c)
-	-- http://www.limitlessled.com/dev/
+    -- http://www.limitlessled.com/dev/
     local cmd, arg, act, r, g, b
     cmd = c:byte(1)
     act = false
-	-- set color
+    -- set color
     if cmd==32 then
         act = true
         arg = c:byte(2)
         -- (256 -x + 181)/256*360
         current_hue = (((256-arg+181)/256*360) % 360)/360
         current_lum = 0.5
-	-- increase lightness
+    -- increase lightness
     elseif cmd==35 then
         act = true
         current_lum = current_lum + 0.05
         if current_lum > 1 then current_lum = 1 end
-	-- decrease lightness
+    -- decrease lightness
     elseif cmd==36 then
         act = true
         current_lum = current_lum - 0.05
         if current_lum < 0 then current_lum = 0 end
-	-- increase saturation
+    -- increase saturation
     elseif cmd==39 then
         act = true
         current_sat = current_sat + 0.05
         if current_sat > 1 then current_sat = 1 end
-	-- decrease saturation
+    -- decrease saturation
     elseif cmd==40 then
         act = true
         current_sat = current_sat - 0.05
         if current_sat < 0 then current_sat = 0 end
-	-- turn lights off
+    -- turn lights off
     elseif cmd==34 then
         pwm.stop(r_pin)
         pwm.stop(g_pin)
         pwm.stop(b_pin)
-	-- turn lights on
+    -- turn lights on
     elseif cmd==33 then
         pwm.start(r_pin)
         pwm.start(g_pin)
