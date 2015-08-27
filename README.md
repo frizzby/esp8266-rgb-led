@@ -2,7 +2,7 @@
 DIY project: remotely control RGB LED strip with iPhone application. Set any color and brightness.
 
 LUA code for [NodeMCU firmware](https://github.com/nodemcu/nodemcu-firmware) 
-
+[iPhone app](https://github.com/frizzby/esp8266-rgb-led.git) to control the lights
 
 ##HW components:
 * esp8266 (ESP-201)
