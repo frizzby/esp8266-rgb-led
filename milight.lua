@@ -45,7 +45,7 @@ function admin(s, c)
         act = true
         arg = c:byte(2)
         -- (256 -x + 181)/256*360
-        current_hue = (((256-arg+181)/256*360) % 360)/360
+        current_hue = (((256-arg+176)/256*360) % 360)/360
         current_lum = 0.5
     -- increase lightness
     elseif cmd==35 then
