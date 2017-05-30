@@ -3,7 +3,7 @@ DIY project: remotely control RGB LED strip with iPhone application. Set any col
 
 Repository contains LUA code for [NodeMCU firmware](https://github.com/nodemcu/nodemcu-firmware)
 
-Version with **floating point** support. Tested with **0.9.6** version. Newer should also work with minor changes.
+You need NodeMCU Version with **floating point** support. Tested with **0.9.6** version. Newer should also work with minor changes.
 
 [iPhone app](https://itunes.apple.com/us/app/limitlessled/id594759938?mt=8) to control the lights
 
